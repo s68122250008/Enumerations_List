@@ -25,8 +25,6 @@ class Node {
         return count;
     }
 
-    // --- Getter Methods (ขอดูค่า) ---
-    // ขอดูข้อมูลข้างใน
     public int getData() {
         return data;
     }
@@ -36,15 +34,11 @@ class Node {
         return next;
     }
 
-    // --- Setter Methods (แก้ไขค่า) ---
-    // แก้ไขข้อมูลข้างใน
     public void setData(int dataValue) {
         data = dataValue;
     }
 
-    // สั่งให้ Node นี้ชี้ไปหา Node อื่น (ใช้เชื่อมต่อ Linked List)
     public void setNext(Node nextValue) {
         next = nextValue;
     }
-    
 }

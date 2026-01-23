@@ -1,24 +1,20 @@
 package List;
 
 class Node {
-
-    // --- ส่วนประกาศตัวแปร (Fields) ---
-    private int data;    // ตัวแปรเก็บข้อมูล (ในที่นี้เก็บตัวเลขจำนวนเต็ม)
-    private Node next;   // ตัวแปรเก็บ "ที่อยู่" ของ Node ถัดไป (เอาไว้ชี้หากัน)
+    private int data;
+    private Node next;
     private static int count;
 
-    // --- Constructors (ตัวสร้างวัตถุ) ---
-    // แบบที่ 1: สร้าง Node โดยใส่แค่ข้อมูล (ยังไม่เชื่อมต่อกับใคร)
     public Node(int dataValue) {
-        data = dataValue;  // เอาค่าที่รับมาใส่ในตัวแปร data
-        next = null;       // ให้ next เป็น null เพราะยังไม่มีตัวถัดไป
+        data = dataValue;
+        next = null;
         ++count;
     }
 
-    // แบบที่ 2: สร้าง Node พร้อมระบุตัวถัดไปทันที
     public Node(int dataValue, Node nextValue) {
-        data = dataValue;  // ใส่ข้อมูล
-        next = nextValue;  // ชี้ไปหา Node ถัดไปทันที
+        data = dataValue;
+        next = nextValue;
+        ++count;
     }
 
     public static int getCount() {
@@ -29,7 +25,6 @@ class Node {
         return data;
     }
 
-    // ขอดูว่า Node นี้ชี้ไปหาใคร
     public Node getNext() {
         return next;
     }
